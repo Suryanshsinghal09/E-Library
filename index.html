@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Library | Your Digital Bookshelf</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="#" onclick="showPage('page-home')">E-Library</a>
+      </div>
+      <div class="search-container">
+        <input type="search" id="search-bar" placeholder="Search by title or author..." />
+      </div>
+      <ul class="nav-links">
+        <li><a onclick="showPage('page-home')">Home</a></li>
+        <li><a onclick="scrollToBooks()">Browse</a></li>
+        <li><a onclick="showPage('page-about')">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="page-home" class="page-content active">
+      <section class="hero">
+        <div class="hero-content fade-in">
+          <h1>Welcome to Your Digital Bookshelf</h1>
+          <p>Discover, read, and explore worlds of knowledge.</p>
+        </div>
+      </section>
+
+      <div id="book-collection-anchor"></div>
+
+      <section class="book-collection">
+        <h2 class="section-title fade-in">Browse Our Collection</h2>
+
+        <div class="filter-container fade-in">
+          <button class="filter-btn active" onclick="filterBooks('All')">
+            All
+          </button>
+          <button class="filter-btn" onclick="filterBooks('Sci-Fi')">
+            Sci-Fi
+          </button>
+          <button class="filter-btn" onclick="filterBooks('Fantasy')">
+            Fantasy
+          </button>
+          <button class="filter-btn" onclick="filterBooks('Mystery')">
+            Mystery
+          </button>
+          <button class="filter-btn" onclick="filterBooks('Non-Fiction')">
+            Non-Fiction
+          </button>
+          <button class="filter-btn" onclick="filterBooks('Classic')">
+            Classic
+          </button>
+        </div>
+
+        <div class="book-grid" id="book-grid">
+        </div>
+        <p id="no-results" class="no-results-message">
+          No books found matching your search.
+        </p>
+      </section>
+    </div>
+
+    <div id="page-about" class="page-content">
+      <section class="about-header">
+        <h1>About E-Library</h1>
+      </section>
+
+      <section class="about-content fade-in">
+        <h2>Our Mission</h2>
+        <p>
+          Welcome to E-Library, a digital sanctuary for book lovers. Our
+          mission is to make literature and knowledge accessible to everyone,
+          everywhere. This project was born from a passion for reading and a
+          belief in the power of shared information. We provide a simple,
+          beautiful, and user-friendly platform where you can discover classic
+          tales, modern marvels, and timeless knowledge.
+        </p>
+
+        <h2>Meet the Team</h2>
+        <p>
+          This E-Library was designed and developed by a dedicated team of
+          students. We are proud to present this project as a testament to our
+          collaboration and hard work.
+        </p>
+
+        <div class="team-section">
+          <div class="team-member fade-in">
+            <h4>Suryansh</h4>
+          </div>
+          <div class="team-member fade-in">
+            <h4>Sneha</h4>
+          </div>
+          <div class="team-member fade-in">
+            <h4>Abhishek</h4>
+          </div>
+          <div class="team-member fade-in">
+            <h4>Divyansh</h4>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Designed By</h4>
+        <ul>
+          <li><span>Suryansh</span></li>
+          <li><span>Sneha</span></li>
+          <li><span>Abhishek</span></li>
+          <li><span>Divyansh</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-column none_ul">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>
+            <span>
+              <a href="#">abc@example.com</a></span>
+          </li>
+          <li>
+            <span><a href="#">+91 12345 67890</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-column none_ul">
+        <h4>Links</h4>
+        <ul>
+          <li><a onclick="showPage('page-home')">Home</a></li>
+          <li><a onclick="showPage('page-about')">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 E-Library Project. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <!-- <script src="script_li.js"></script> -->
+</body>
+
+</html>
